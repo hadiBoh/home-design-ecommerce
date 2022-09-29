@@ -1,13 +1,148 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Avestan&display=swap');
+*,::after,::before{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+}
+#root{
+  width: 100%;
+}
+.App{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100vh;
+}
+:root{
+  --bg-color: #fff;
+  --bx-shadow: rgba(0,0,0,0.2) 0 0.25rem 0.5rem,
+                rgba(0,0,0,0.1) 0 0.15rem 0.25rem;
+  --text-sizeA: 4rem;
+  --text-sizeB: 3rem;  
+  --text-sizeC: 2rem;  
+  --text-sizeD: 1.5rem;  
+  --text-sizeE: 1.25rem;  
+  --text-sizeF: 1rem;  
+  --text-sizeG: 0.75rem;  
+  --text-sizeH: 0.5rem;  
+
+  --clr-primary-1: #453227;
+  --clr-primary-2: #5f4435;
+  --clr-primary-3: #795744;
+  --clr-primary-4: #936a53;
+  --clr-primary-5: #ab7a5f;
+  --clr-primary-6: #b99179;
+  --clr-primary-7: #c5a491;
+  --clr-primary-8: #d1b6a8;
+  --clr-primary-9: #decbc0;
+  --clr-primary-10: #eaded7;
+  --clr-grey-1: #102a42;
+  --clr-grey-2: #243a52;
+  --clr-grey-3: #324d67;
+  --clr-grey-4: #48647f;
+  --clr-grey-5: #617d98;
+  --clr-grey-6: #829ab0;
+  --clr-grey-7: #9eb2c7;
+  --clr-grey-8: #bcccdc;
+  --clr-grey-9: #dae2ec;
+  --clr-grey-10: #f1f5f8;
+  --clr-white: #fff;
+  --clr-red-dark: #bb2525;
+  --clr-red-light: #e66b6b;
+  --clr-green-dark: #25bb32;
+  --clr-green-light: #6be675;
+  --clr-black: #222;
+
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  --dark-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+html{
+  font-family: "Noto Sans Avestan", sans-serif;
+  overflow-x: hidden;
+}
+body{
+  width: 100%;
+  display: flex;
+}
+.home ,.about , .products ,.product ,.not-found ,.product__wrapper ,.cart{
+  display: flex;
+  flex-grow: 1;
+  margin-top: 120px;
+}
+.not-found{
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+.footer{
+  background: var(--clr-black);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: var(--text-sizeE);
+  color: var(--bg-color);
+  margin-top: 2rem;
+}
+.footerA{
+  text-decoration: underline;
+  color: var(--clr-primary-7)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+
+
+/* about page */
+.about{
+  display: flex;
+  flex-direction: column;
+}
+.about_grid{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+.img_aboutw{
+  aspect-ratio: 2/3;
+  max-width: 100vw;
+  width: 100%;
+  height: 100%;
+}
+.img_aboutw img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.about article h1{
+  margin-bottom: 2rem;
+}
+.about article p{
+  letter-spacing: 0.08rem;
+  line-height: 2rem;
+}
+
+@media(min-width:800px){
+  .about_grid{
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  }
+  .img_aboutw{
+    aspect-ratio: 1/1;
+  }
+  
 }

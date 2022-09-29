@@ -1,0 +1,3 @@
+function Local(key , prop){
+    
+}
